@@ -1,15 +1,58 @@
 import { Hero } from "@/components/shared/Hero";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Trophy, Globe, BookOpen, ExternalLink, Clock, MapPin } from "lucide-react";
+import {
+  Trophy,
+  Globe,
+  BookOpen,
+  ExternalLink,
+  Clock,
+  MapPin,
+} from "lucide-react";
 
 const topVisitors = [
-  { rank: 1, name: "Dr. Maya Sari", type: "Peneliti", visits: 15, purpose: "Penelitian Pendidikan" },
-  { rank: 2, name: "Budi Santoso", type: "Mahasiswa", visits: 12, purpose: "Skripsi" },
-  { rank: 3, name: "Rina Wati", type: "Orang Tua", visits: 10, purpose: "Konsultasi Belajar" },
-  { rank: 4, name: "Ahmad Fauzi", type: "Alumni", visits: 8, purpose: "Nostalgia" },
-  { rank: 5, name: "Sari Indah", type: "Mahasiswa", visits: 7, purpose: "Penelitian" },
+  {
+    rank: 1,
+    name: "Dr. Maya Sari",
+    type: "Peneliti",
+    visits: 15,
+    purpose: "Penelitian Pendidikan",
+  },
+  {
+    rank: 2,
+    name: "Budi Santoso",
+    type: "Mahasiswa",
+    visits: 12,
+    purpose: "Skripsi",
+  },
+  {
+    rank: 3,
+    name: "Rina Wati",
+    type: "Orang Tua",
+    visits: 10,
+    purpose: "Konsultasi Belajar",
+  },
+  {
+    rank: 4,
+    name: "Ahmad Fauzi",
+    type: "Alumni",
+    visits: 8,
+    purpose: "Nostalgia",
+  },
+  {
+    rank: 5,
+    name: "Sari Indah",
+    type: "Mahasiswa",
+    visits: 7,
+    purpose: "Penelitian",
+  },
 ];
 
 export default function KunjunganUmum() {
@@ -28,25 +71,33 @@ export default function KunjunganUmum() {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Globe className="h-6 w-6 text-primary" />
-                  Registrasi Kunjungan Umum
+                  Registrasi Kunjungan Umum.
                 </CardTitle>
                 <CardDescription>
-                  Daftar sebagai pengunjung umum dan nikmati fasilitas perpustakaan digital
+                  Daftar sebagai pengunjung umum dan nikmati fasilitas
+                  perpustakaan digital
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
-                <Button 
-                  variant="hero" 
-                  size="lg" 
+                <Button
+                  variant="hero"
+                  size="lg"
                   className="w-full"
-                  onClick={() => window.open('https://forms.google.com/your-public-form-link', '_blank')}
+                  onClick={() =>
+                    window.open(
+                      "https://forms.google.com/your-public-form-link",
+                      "_blank"
+                    )
+                  }
                 >
                   <ExternalLink className="h-5 w-5" />
                   Form Kunjungan Umum
                 </Button>
-                
+
                 <div className="bg-warning/10 border border-warning/30 rounded-lg p-4">
-                  <h4 className="font-semibold text-warning mb-2">Persyaratan Kunjungan:</h4>
+                  <h4 className="font-semibold text-warning mb-2">
+                    Persyaratan Kunjungan:
+                  </h4>
                   <ul className="text-sm space-y-1 text-muted-foreground">
                     <li>• Membawa identitas resmi (KTP/SIM/Paspor)</li>
                     <li>• Mengisi form registrasi lengkap</li>
@@ -71,14 +122,18 @@ export default function KunjunganUmum() {
                     <Clock className="h-5 w-5 text-primary" />
                     <div>
                       <p className="font-semibold text-sm">Jam Operasional</p>
-                      <p className="text-xs text-muted-foreground">Senin-Jumat: 08:00-16:00</p>
+                      <p className="text-xs text-muted-foreground">
+                        Senin-Jumat: 08:00-16:00
+                      </p>
                     </div>
                   </div>
                   <div className="flex items-center gap-3 p-3 bg-muted/30 rounded-lg">
                     <MapPin className="h-5 w-5 text-primary" />
                     <div>
                       <p className="font-semibold text-sm">Lokasi</p>
-                      <p className="text-xs text-muted-foreground">Gedung Perpustakaan Lt.2</p>
+                      <p className="text-xs text-muted-foreground">
+                        Gedung Perpustakaan Lt.2
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -86,15 +141,27 @@ export default function KunjunganUmum() {
                 <div className="space-y-3">
                   <h4 className="font-semibold">Fasilitas untuk Umum:</h4>
                   <div className="grid grid-cols-1 gap-2">
-                    <Button variant="outline" size="sm" className="justify-start">
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="justify-start"
+                    >
                       <BookOpen className="h-4 w-4 mr-2" />
                       Akses Koleksi Umum (1000+ buku)
                     </Button>
-                    <Button variant="outline" size="sm" className="justify-start">
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="justify-start"
+                    >
                       <Globe className="h-4 w-4 mr-2" />
                       Internet & WiFi Gratis
                     </Button>
-                    <Button variant="outline" size="sm" className="justify-start">
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="justify-start"
+                    >
                       <MapPin className="h-4 w-4 mr-2" />
                       Ruang Baca Nyaman
                     </Button>
@@ -143,21 +210,26 @@ export default function KunjunganUmum() {
                     key={visitor.rank}
                     className={`flex items-center justify-between p-4 rounded-lg transition-smooth hover:scale-105 ${
                       visitor.rank === 1
-                        ? 'bg-gradient-primary text-primary-foreground shadow-glow'
+                        ? "bg-gradient-primary text-primary-foreground shadow-glow"
                         : visitor.rank === 2
-                        ? 'bg-accent/20 border border-accent/30'
+                        ? "bg-accent/20 border border-accent/30"
                         : visitor.rank === 3
-                        ? 'bg-secondary/20 border border-secondary/30'
-                        : 'bg-muted/20 border border-muted/30'
+                        ? "bg-secondary/20 border border-secondary/30"
+                        : "bg-muted/20 border border-muted/30"
                     }`}
                   >
                     <div className="flex items-center gap-3">
-                      <div className={`w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm ${
-                        visitor.rank === 1 ? 'bg-yellow-400 text-black' :
-                        visitor.rank === 2 ? 'bg-gray-300 text-black' :
-                        visitor.rank === 3 ? 'bg-amber-600 text-white' :
-                        'bg-muted text-muted-foreground'
-                      }`}>
+                      <div
+                        className={`w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm ${
+                          visitor.rank === 1
+                            ? "bg-yellow-400 text-black"
+                            : visitor.rank === 2
+                            ? "bg-gray-300 text-black"
+                            : visitor.rank === 3
+                            ? "bg-amber-600 text-white"
+                            : "bg-muted text-muted-foreground"
+                        }`}
+                      >
                         {visitor.rank}
                       </div>
                       <div>
@@ -188,11 +260,15 @@ export default function KunjunganUmum() {
                 <div className="grid grid-cols-2 gap-4">
                   <div className="text-center p-4 bg-primary/10 rounded-lg">
                     <div className="text-2xl font-bold text-primary">127</div>
-                    <p className="text-sm text-muted-foreground">Total Kunjungan</p>
+                    <p className="text-sm text-muted-foreground">
+                      Total Kunjungan
+                    </p>
                   </div>
                   <div className="text-center p-4 bg-accent/10 rounded-lg">
                     <div className="text-2xl font-bold text-accent">45</div>
-                    <p className="text-sm text-muted-foreground">Pengunjung Bulan Ini</p>
+                    <p className="text-sm text-muted-foreground">
+                      Pengunjung Bulan Ini
+                    </p>
                   </div>
                   <div className="text-center p-4 bg-success/10 rounded-lg">
                     <div className="text-2xl font-bold text-success">89</div>
@@ -200,7 +276,9 @@ export default function KunjunganUmum() {
                   </div>
                   <div className="text-center p-4 bg-warning/10 rounded-lg">
                     <div className="text-2xl font-bold text-warning">4.8</div>
-                    <p className="text-sm text-muted-foreground">Rating Layanan</p>
+                    <p className="text-sm text-muted-foreground">
+                      Rating Layanan
+                    </p>
                   </div>
                 </div>
               </CardContent>
